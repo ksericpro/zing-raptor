@@ -1,0 +1,26 @@
+Zing API
+--------
+
+$result_4 = insertPaidOrderMain('dev', SQLSERVER_ZINGMOBILE_TABLE, $itemarray, 14.45, "eric", YES_CODE_VOUCHER, 1);
+$result_4 = insertPaidOrderMain('dev', SQLSERVER_ZINGMOBILE_TABLE, $itemarray, 15.52, "eric", NO_CODE_VOUCHER);
+
+5th parameter maximum character is 15 characters put customer mobile.
+if there is YES_CODE_VOUCHER,
+    The payment amount = (total cost - discount) * 7%
+	In this case payment amount = (15.52 - 1) * 7% = 14.45
+
+Raptor
+------
+Adrian will create  for each branch:
+
+
+PAYMENT_TYPE = 99 //standardise
+SQLSERVER_ZINGMOBILE_TABLE = PREORDER //standardise
+
+DISCOUNT_CODE = 396 
+OPERATOR_NO
+POSID
+OPEN_ITEM = '139999999999999'
+
+
+

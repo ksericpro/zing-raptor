@@ -1,0 +1,56 @@
+__construct with 3 params called: 130000000000030,1,1
+insertPaidOrder::connect DB
+__construct with 4 params called: raptor_sp,hrs,R8pt0r5792,raptor
+Connecting..raptor_sp raptor hrs/R8pt0r5792
+Database Connected.
+insertUnpaidOrder::Force close on PREORDER.
+Database connected.
+delete from HeldTables where TableNo = 'PREORDER'
+1 HeldTables rows deleted.
+delete from HeldItems where TableNo = 'PREORDER'
+3 HeldItems rows deleted.
+insertPaidOrder::Open Table
+execute_OpenTable_SP()
+Executing sp_HDS_OpenTable
+1 result Found.
+Array
+(
+    [ErrCode] => 01
+    [ErrMsg] => 
+    [SalesNo] => 71895
+    [SplitNo] => 0
+)
+insertPaidOrder::1..* Order Items
+SalesNo=71895, SplitNo=0
+__construct with 2 params called: 139999999999999,1
+Database connected.
+Executing sp_HDS_OpenPrepItem
+1 result Found.
+PrepItem Successful for eric
+130000000000030, 1, 1
+Database connected.
+Executing sp_HDS_OrderItem
+1 result Found.
+Array
+(
+    [ErrCode] => 01
+    [ErrMsg] => 
+    [SalesRef] => 191542
+)
+insertUnpaidOrder::Hold Table
+Database connected.
+Executing sp_HDS_HoldTable
+1 result Found.
+insertPaidOrder::Payment
+Database connected.
+Executing sp_HDS_Payment
+1 result Found.
+Array
+(
+    [ErrCode] => 01
+    [ErrMsg] => 
+    [PaymentMsg] => Remaining
+    [Amount] => 0.01
+)
+Payment Message..Remaining, Amount=0.01
+Destroying Conection
